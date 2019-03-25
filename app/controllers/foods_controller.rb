@@ -45,6 +45,20 @@ class FoodsController < ApplicationController
     end
   end
 
+  def increment
+    # Put code here
+    #
+    #
+    # What is the algorithm?
+    #
+    # Step 1: Find the right anaimal
+    # Step 2: Increment it's count
+    # Step 3: Save it
+    # Step 4: return some json
+    # ...
+
+  end
+
   # DELETE /foods/1
   def destroy
     @food.destroy
