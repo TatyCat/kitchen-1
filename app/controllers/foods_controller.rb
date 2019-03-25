@@ -3,24 +3,16 @@ class FoodsController < ApplicationController
 
   # GET /foods
   def index
-    calories = params[:calories]
-
-    if calories
-      @foods = Food.where(calories: calories)
-    else
-      @foods = Food.all
-    end
-
     # Lets get the name from the parameters
     name = params[:name]
 
     # If name is not nil or false
     if name.present?
       # Exact match only
-      @foods = Food.where(name: name)
+      # @foods = Food.where(name: name)
 
       # Partial match
-      # @foods = Food.where("name ilike ?", "%#{name}%")
+      @foods = Food.where("name ilike ?", "%#{name}%")
     else
       @foods = Food.all
     end
